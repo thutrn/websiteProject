@@ -4,7 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome to Kamloops</title>
+
+        <!-- Link to the external Stylesheet files -->
         <link rel="stylesheet" type="text/css" href="../style/homepage.css">
+
+        <!-- Link to the external JavaScript files -->
+        <script src="../scripts/footer.js" defer></script>
     </head>
 <body>
     <header>
@@ -13,11 +18,12 @@
 
     <nav>
         <ul>
-            <li><a href="#discover">Discover</a></li>
-            <li><a href="#things-to-do">Things to Do</a></li>
-            <li><a href="#things-to-eat">Things to Eat</a></li>
-            <li><a href="#where-to-stay">Where to Stay</a></li>
-            <li><a href="#general-info">General Info</a></li>
+            <li><a class="highlighted" href="index.html">Discover</a></li>
+            <li><a href="things-to-do.html">Things to Do</a></li>
+            <li><a href="where-to-eat.Html">Things to Eat</a></li>
+            <li><a href="where-to-stay.htm">Where to Stay</a></li>
+            <li><a href="general-info.html">General Info</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
     <h2 style="color: #78aba8"> Welcome to Kamloops, BC! </h2>
@@ -33,9 +39,14 @@
         </div>
     </section>
 </body>
-<footer>
-    <a href="index.html">Home</a>
-</footer>
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="footer-info">
+            <p class="footer-info__last-updated">Website last updated: <span id="footer-info__last-updated-date"></span></p>
+        </div>
+    </footer>
 </html>
 
 

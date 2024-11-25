@@ -5,3 +5,23 @@
 #things-to-do h1 {
     text-align: center;
 }
+
+.image-text-container {
+    display: flex;
+}
+
+.image-text__image-figure {
+    flex: 1;
+}
+
+.image-text__image-figure figcaption {
+    font-size: 10px;
+}
+
+.image-text__text-container {
+    flex: 2;
+}
+
+.image-text__image {
+    width: 100%;
+}
