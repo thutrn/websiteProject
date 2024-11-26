@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+   
+    color: #711c37;
+  
+}
+
+header {
+    position: relative;
+
+    background: url('food.jpg') no-repeat centre centre/cover;
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
+#h11{
+    position:absolute;
+    top: 10px;
+    left:20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+#h12 {
+    position: absolute;
+    top:50%;
+    left:50%;
+    font-size: 2.5em;
+    font-weight: bold;
+
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(3, 58, 52, 0.5);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#horizontal {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#horizontal li {
+    display: inline;
+}
+
+#horizontal li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#horizontal li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.textblock {
+    width:50%;
+}
+.textblock h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.textblock p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+.imgblock {
+    width: 45%;
+}
+
+imgblock img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    width: 45%;
+}
+
+section img {
+    width: 45%;
+    border-radius: 10px;
+}
