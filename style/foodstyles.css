@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-image: url('food.jpg');
+    background-image: url('../assets/food.jpg');
     background-repeat:  no-repeat;
     background-position:  centre centre;
     background-size: contain;

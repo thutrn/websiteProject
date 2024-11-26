@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-image: url('stay.jpg');
+    background-image: url('../assets/stay.jpg');
     background-repeat:  no-repeat;
     background-position:  centre centre;
     background-size: contain;

@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-image: url('kamloops1.jpg');
+    background-image: url('../assets/kamloops1.jpg');
     background-repeat:  no-repeat;
     background-position:  centre centre;
     background-size: contain;
