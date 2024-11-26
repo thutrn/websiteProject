@@ -130,6 +130,7 @@ section:nth-child(even) {
 .textblock p {
     font-size: 1.1em;
     line-height: 1.5;
+    color: rgb(31,87,89);
 }
 
 
@@ -145,6 +146,7 @@ section p {
     font-size: 1.1em;
     line-height: 1.5;
     width: 80%;
+    color:rgb(31,87,89);
 }
 
 section:nth-child(odd) .textblock {
