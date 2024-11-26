@@ -1,14 +1,17 @@
 
 * {
-    margin: 0;
+    margin: 6px;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-   
+    background-image: url('food.jpg');
+    background-repeat:  no-repeat;
+    background-position:  centre centre;
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0.2);
     color: #711c37;
   
 }
@@ -16,33 +19,37 @@ body {
 header {
     position: relative;
 
-    background: url('food.jpg') no-repeat centre centre/cover;
+   
     color:white;
     text-align: center;
     padding: 20px;
 }
 #h11{
     position:absolute;
-    top: 10px;
-    left:20px;
+    top: 5px;
+    left:8px;
     font-size: 2em;
     font-weight: bold;
+    z-index:20;
 }
 #h12 {
     position: absolute;
-    top:50%;
-    left:50%;
+    top:510%;
+    left:20%;
     font-size: 2.5em;
     font-weight: bold;
+    z-index:20;
+    color: white
 
 }
 
-nav {
+nav#main {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 42px;
+    left: 150px;
     width: 100%;
-    background-color: rgba(3, 58, 52, 0.5);
+    text-align: center;
+    background-color: rgba(2, 38, 34, 0.5);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -50,13 +57,35 @@ nav {
     z-index: 10;
 }
 
-nav {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    text-align: center;
+nav#local {
+    margin-top: 30%;
+   width: 400px;
+   position: absolute;
+   background-color: rgb(239, 228, 215, 0.7);
+   padding:5px;
+   box-shadow: inset;
+   
+    color: #711c37;
 }
-
+nav#local ol {
+    
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0;
+    border-radius: 10px;
+    
+}
+nav#local ol li {
+    margin-bottom: 20px;
+}
+nav#local ol li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+nav#local ol li a:hover {
+    text-decoration: underline;
+}
 #horizontal {
     list-style-type: none;
     display: flex;
@@ -77,13 +106,17 @@ nav {
 
 #horizontal li a:hover {
     text-decoration: underline;
+   
+}
+section#restaurant1 {
+margin-top: 120vh;
 }
 
 section {
     display: flex;
     justify-content: space-between;
     padding: 40px;
-    margin: 20px 0;
+    margin: 1vh 0;
     border-bottom: 1px solid #ddd;
 }
 .textblock {
@@ -96,6 +129,25 @@ section {
 .textblock p {
     font-size: 1.1em;
     line-height: 1.5;
+}
+.moreinfo {    
+    padding: 12px 24px;          
+    font-size: 1em;            
+    font-weight: bold;           
+    background-color: #c6757e;   
+    color: white;               
+    border: none;               
+    border-radius: 5px;        
+    transition: background-color 0.3s ease; 
+    align-self: flex-end;  
+    
+}
+.moreinfo a {
+    text-decoration: none;
+}
+
+.moreinfo:hover {
+    background-color: #9b3d5f;   
 }
 .imgblock {
     width: 45%;
@@ -119,10 +171,20 @@ section h2 {
 section p {
     font-size: 1.1em;
     line-height: 1.5;
-    width: 45%;
+    width: 80%;
 }
 
 section img {
-    width: 45%;
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
+}
+
+div#back {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: antiquewhite;
 }
