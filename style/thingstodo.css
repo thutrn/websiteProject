@@ -1,3 +1,7 @@
+header {
+    background-image: url('../assets/kamview1.jpg');
+}
+
 #things-to-do {
     padding: 24px 48px;
 }

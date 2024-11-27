@@ -1,142 +1,86 @@
-var validationFields = {
-    name: {
-        shouldValidate:  false,
-        valid: false
-    },
-    email: {
-        shouldValidate:  false,
-        valid: false
-    },
-    subject: {
-        shouldValidate:  false,
-        valid: false
-    },
-    message: {
-        shouldValidate:  false,
-        valid: false
-    }
-};
 
-var errorElement = document.getElementById('contact-us-error');
-
-// Function to handle form submission
-function handleFormSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Get form data
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-
-    if(allFieldsValid()) {
-        alert('Form is missing information. Please fill the form and submit again.');
-    } else {
-        // Display a confirmation message to the user
-        alert('Thank you for contacting us, ' + name + '! Your message has been received.');
-    }
-
-}
-
-// Add event listener to the form
 document.addEventListener('DOMContentLoaded', function() {
-    setupFormListeners();
+    const form = document.querySelector('form');
+    const resetButton = document.getElementById('clear-form-button');
+
+    setFormDate();
+
+    // Add an event listener to the form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+        handleFormSubmission();
+    });
+
+    // Add an event listener to the reset button
+    resetButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+        resetForm(form);
+    });
 });
 
-function allFieldsValid() {
-    return validationFields.name.valid &&
-        validationFields.email.valid &&
-        validationFields.subject.valid &&
-        validationFields.message.valid;
-}
+function handleFormSubmission() {
+    const name = document.getElementById('name').value; // Get the user's name
+    const formValid = checkFormValidation();
 
-function setupFormListeners() {
-    var nameElement = document.getElementById('name');
-    var emailElement = document.getElementById('email');
-    var subjectElement = document.getElementById('subject');
-    var messageElement = document.getElementById('message');
-    var form = document.querySelector('form');
-
-    form.addEventListener('submit', handleFormSubmit);
-
-    nameElement.addEventListener('keyup', validateNameField);
-    emailElement.addEventListener('keyup', validateEmailField);
-    subjectElement.addEventListener('keyup', validateSubjectField);
-    messageElement.addEventListener('keyup', validateMessageField);
-
-    nameElement.addEventListener('change', enableValidateField);
-    emailElement.addEventListener('change', enableValidateField);
-    subjectElement.addEventListener('change', enableValidateField);
-    messageElement.addEventListener('change', enableValidateField);
-}
-
-function enableValidateField(event) {
-    console.log(event.target.id);
-    validationFields[event.target.id].shouldValidate = true;
-}
-
-function validateNameField(event) {
-    console.log(validationFields);
-    var nameElement = document.getElementById('name');
-    clearError();
-
-    // check if can validate and then validate field is not empty
-    if(validationFields['name'].shouldValidate && nameElement.value !== '') {
-        validationFields['name'].valid = true;
-    } else {
-        validationFields['name'].valid = false;
-        setError('Name is a required field');
+    if (formValid) {
+        // Display an alert thanking the user
+        alert(`Thank you for joining, ${name}! We will keep you up to date with the latest in Kamloops.`);
     }
+
 }
 
-function validateEmailField(event) {
-    var emailElement = document.getElementById('email');
-    clearError();
+function checkFormValidation() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const date = document.getElementById('start-date').value;
+    let valid = true;
+    let errorMessage = '';
 
-    // check if can validate and then validate field is not empty
-    if(validationFields['email'].shouldValidate && emailElement.value !== '' && (emailElement.value.includes('@') && emailElement.value.includes('.'))) {
-        validationFields['email'].valid = true;
-    } else {
-        if (emailElement.value == '') {
-            setError('Email is required field');
-        } else if (!emailElement.value.includes('@') || !emailElement.value.includes('.')) {
-            setError('Email is not in correct format');
-        }
-
-        validationFields['email'].valid = false;
+    if (name === "") {
+        errorMessage = "Please enter your name.";
+        valid = false;
     }
-}
 
-function validateSubjectField(event) {
-    var nameElement = document.getElementById('subject');
-    clearError();
-
-    // check if can validate and then validate field is not empty
-    if(validationFields['subject'].shouldValidate && nameElement.value !== '') {
-        validationFields['subject'].valid = true;
-    } else {
-        validationFields['subject'].valid = false;
-        setError('Subject is required field');
+    if (email === "") {
+        errorMessage = "Please enter your email.";
+        valid = false;
     }
-}
 
-function validateMessageField(event) {
-    var nameElement = document.getElementById('message');
-    clearError();
-
-    // check if can validate and then validate field is not empty
-    if(validationFields['message'].shouldValidate && nameElement.value !== '') {
-        validationFields['message'].valid = true;
-    } else {
-        validationFields['message'].valid = false;
-        setError('Message is required field');
+    if (!validateEmail(email)) {
+        errorMessage = "Please enter a valid email address.";
+        valid = false;
     }
+
+    if (date === "") {
+        errorMessage = "Please select a start date.";
+        valid = false;
+    }
+
+    if (!valid) {
+        alert(errorMessage);
+    }
+
+    return valid;
 }
 
-function setError(errorMessage) {
-    errorElement.innerHTML = errorMessage;
+// Function to validate email format
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
 }
 
-function clearError() {
-    errorElement.innerHTML = '';
+function setFormDate() {
+    // Get today's date
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+
+    // Set the value of the date input field to today's date
+    document.getElementById('start-date').value = `${year}-${month}-${day}`;
+}
+
+function resetForm(form) {
+    form.reset();
+    setFormDate()
 }

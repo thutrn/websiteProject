@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+
+        <!-- Link to the external Stylesheet files -->
+        <link rel="stylesheet" type="text/css" href="../style/main.css">
+        <link rel="stylesheet" type="text/css" href="../style/thingstodo.css">
+        <link rel="stylesheet" type="text/css" href="../style/contact.css">
+
+        <!-- Link to the external JavaScript files -->
+        <script src="../scripts/contact.js" defer></script>
+        <script src="../scripts/footer.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="h11"> Experience Kamloops </h1>
+
+            <nav id="main">
+                <ul id="horizontal">
+                    <li><a href="index.html">Experience Kamloops</a></li>
+                    <li><a href="thingstodo.html">Things to do </a></li>
+                    <li><a href="foodiepicks.html">Foodie Picks</a></li>
+                    <li><a href="wheretostay.html">Where to Stay</a></li>
+                    <li><a href="generalinfo.html">General Info</a></li>
+                    <li><a href="itinerary.html">Itinerary</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="contact-us">
+                <h2 style="color: #78aba8"> Subscribe to our mailing list! </h2>
+
+                <p>Thank you for visiting our Kamloops website! We are committed to providing you with comprehensive information about all the amazing attractions, activities, and resources our beautiful city has to offer. If you have any questions, suggestions, or need further assistance, please don't hesitate to reach out. Our dedicated team is here to help you make the most of your Kamloops experience. We look forward to hearing from you!</p>
+
+                <form novalidate>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" value="" required>
+                    <br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <br><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    <br><br>
+
+                    <p>What are your interests:</p>
+                    <label><input type="checkbox" name="interests" value="travel"> Travel</label>
+                    <label><input type="checkbox" name="interests" value="food"> Food</label>
+                    <label><input type="checkbox" name="interests" value="sights"> Sightseeing</label>
+                    <label><input type="checkbox" name="interests" value="events"> Events</label>
+                    <br><br>
+
+                    <label for="communication">Preferred Communication:</label>
+                    <select id="communication" name="communication">
+                        <option value="email" selected>Email</option>
+                        <option value="sms">SMS</option>
+                        <option value="phone">Phone</option>
+                    </select>
+                    <br><br>
+
+                    <label for="quantity">How often can we update you (per month):</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                    <br><br>
+
+                    <label for="start-date">When can we start sending updates:</label>
+                    <input type="date" id="start-date" name="start-date" value="2024-01-01">
+                    <br><br>
+
+                    <button type="submit">Subscribe</button>
+                    <button type="button" id="clear-form-button">Clear</button>
+                </form>
+
+            </section>
+        </main>
+        <footer>
+            <div class="footer-links">
+                <a href="#" id="back-to-top"> Back to Top </a>
+                <a href="index.html">Home</a>
+                <a href="subscribe.html">Subscribe</a>
+                <a href="upcomingevents.html">Events</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 Experience Kamloops. All rights reserved.</p>
+                <p class="footer-info__last-updated">Website last updated: <span id="footer-info__last-updated-date"></span></p>
+            </div>
+        </footer>
+    </body>
+</html>
+
+

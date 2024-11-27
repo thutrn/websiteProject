@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discover Kamloops</title>
+
+        <!-- Link to the external Stylesheet files -->
+        <link rel="stylesheet" type="text/css" href="../style/main.css">
+
+        <link rel="stylesheet" type="text/css" href="../style/events.css">
+
+        <!-- Link to the external JavaScript files -->
+        <script src="../scripts/event.js" defer></script>
+        <script src="../scripts/footer.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="h11"> Experience Kamloops </h1>
+
+            <nav id="main">
+                <ul id="horizontal">
+                    <li><a href="index.html">Experience Kamloops</a></li>
+                    <li><a href="thingstodo.html">Things to do </a></li>
+                    <li><a href="foodiepicks.html">Foodie Picks</a></li>
+                    <li><a href="wheretostay.html">Where to Stay</a></li>
+                    <li><a href="generalinfo.html">General Info</a></li>
+                    <li><a href="itinerary.html">Itinerary</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="event-section">
+                <h1 style="color: #78aba8"> Upcoming Events in Kamloops </h1>
+                <h2>Kamloops is always bustling with exciting events, from exhilarating outdoor festivals and concerts to art exhibits and sporting events, ensuring there's never a dull moment in this vibrant city.</h2>
+
+            </section>
+
+            <section class="event-section">
+                <div class="event-container">
+                    <h3>Wildlights at BC Wildlife Park</h3>
+                    <img class="event-image" src="../assets/wildlights.jpg" alt="wildlights"/>
+                    <p>
+                        <strong>Wildlights</strong> at the BC Wildlife Park in Kamloops is a magical holiday event that transforms the park into a winter wonderland with over a million twinkling lights. Running from December 13th to January 5th, the event features enchanting light displays, visits from Santa and Mrs. Claus, and performances by beloved characters like Anna and Elsa. There's also a special sensory-friendly evening to ensure everyone can enjoy the festivities. It's a beloved tradition that brings holiday cheer to visitors of all ages.
+                    </p>
+                    <h3 class="center-text">Wildlights starts in</h3>
+                    <div class="countdown-container">
+                        <div id="wildlights-countdown" class="countdown">
+                            <div><span class="days"></span> Days</div>
+                            <div><span class="hours"></span> Hours</div>
+                            <div><span class="minutes"></span> Minutes</div>
+                            <div><span class="seconds"></span> Seconds</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-container">
+                    <h3>Kamloops Blazers vs. Seattle Thunderbirds</h3>
+                    <img class="event-image" src="../assets/blazerfight.jpg" alt="kamloops blazers"/>
+                    <p>Support the <strong>Kamloops Blazers</strong> as they face off against the Seattle Thunderbirds. Tickets can be purchased online or at the door, or watch live by visiting the website.</p>
+                    <button class="btn" onclick="window.location.href='https://chl.ca/whl-blazers/schedule/'">Buy Tickets Here</button>
+
+                    <h3 class="center-text">Puck drops in</h3>
+                    <div class="countdown-container">
+                        <div id="blazers-countdown" class="countdown">
+                            <div><span class="days"></span> Days</div>
+                            <div><span class="hours"></span> Hours</div>
+                            <div><span class="minutes"></span> Minutes</div>
+                            <div><span class="seconds"></span> Seconds</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <footer>
+            <div class="footer-links">
+                <a href="#" id="back-to-top"> Back to Top </a>
+                <a href="index.html">Home</a>
+                <a href="subscribe.html">Subscribe</a>
+                <a href="upcomingevents.html">Events</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 Experience Kamloops. All rights reserved.</p>
+                <p class="footer-info__last-updated">Website last updated: <span id="footer-info__last-updated-date"></span></p>
+            </div>
+        </footer>
+    </body>
+</html>
+
+
