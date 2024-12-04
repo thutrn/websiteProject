@@ -113,8 +113,41 @@ nav#local ol li a:hover {
     text-decoration: underline;
    
 }
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse; /* Collapse borders into single border */
+    background-color: #a29fa2;
+    border: 3px solid #711c37; 
+    border-radius: 10px;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 3px solid #711c37; 
+    border-radius: 10px;
+    color: white;
+}
+
+th {
+    background-color: #a29fa2;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+td:hover {
+    background-color: #a16969;
+}
+caption {
+    font-size: 1.8em;
+    margin: 10px;
+    color: #711c37;
+    font-weight: bold;
+}
 section#place1 {
-margin-top: 120vh;
+margin-top: 20vh;
 }
 
 section {

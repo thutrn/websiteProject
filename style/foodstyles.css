@@ -146,6 +146,7 @@ nav#local ol li a:hover {
    
 }
 
+
 section#restaurant1 {
 margin-top: 120vh;
 }
@@ -195,6 +196,7 @@ section {
 
 imgblock img {
     width: 100%;
+    height:auto;
     border-radius: 10px;
 }
 .imgblock img:hover {
