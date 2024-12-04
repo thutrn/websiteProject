@@ -6,7 +6,12 @@
 }
 
 #contact-us p {
-    max-width: 700px;
+    max-width: 1000px;
+
+    @media (max-width: 1000px) {
+        max-width: 100%;
+        padding: 24px;
+    }
 }
 
 form {

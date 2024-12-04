@@ -15,6 +15,16 @@ header {
 
 .image-text-container {
     display: flex;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+
+.image-text-container__reverse-mobile {
+    @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .image-text__image-figure {

@@ -11,7 +11,7 @@ body {
 header {
     background-repeat:  no-repeat;
     background-position:  center;
-    background-size: 100%;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.2);
     position: relative;
     color:white;
@@ -56,6 +56,10 @@ nav#main {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+
+    @media (max-width: 1200px) {
+        margin-left: 0;
+    }
 }
 
 nav#local {
@@ -92,6 +96,13 @@ nav#local ol li a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
 }
 
 #horizontal li {
@@ -103,6 +114,10 @@ nav#local ol li a:hover {
     color: white;
     font-size: 1.2em;
     font-weight: bold;
+
+    @media (max-width: 1200px) {
+        font-size: 1em;
+    }
 }
 
 #horizontal li a:hover {
