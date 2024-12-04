@@ -17,6 +17,7 @@ body {
 
 header {
     position: relative;
+    
     color:white;
     text-align: center;
     padding: 20px;
@@ -31,8 +32,8 @@ header {
 }
 #h12 {
     position: absolute;
-    top:510%;
-    left:65%;
+   margin-top: 45%;
+    text-align: left;
     font-size: 2.5em;
     font-weight: bold;
     z-index:20;
@@ -105,26 +106,26 @@ nav#local ol li a:hover {
    
 }
 section#stage1 {
-    margin-top: 60vh;
+    margin-top: 100vh;
     }
 
 section {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+   
     margin: 1vh 0;
     border-bottom: 1px solid #ddd;
     flex-wrap: wrap;
 }
-section:nth-child(even) {
+/* section:nth-child(even) {
     flex-direction: row-reverse;
-}
+} */
 .textblock {
     width:100%;
     text-align: left;
 }
 .textblock h2 {
-    font-size: 2em;
+    font-size: 1.3em;
     margin-bottom: 10px;
 }
 .textblock p {
@@ -138,7 +139,7 @@ section:nth-child(even) {
 
 
 section h2 {
-    font-size: 2em;
+    font-size: 1.3em;
     margin-bottom: 10px;
 }
 
@@ -149,13 +150,13 @@ section p {
     color:rgb(31,87,89);
 }
 
-section:nth-child(odd) .textblock {
+/* section:nth-child(odd) .textblock {
     text-align: left; 
-}
+} */
 
-section:nth-child(even) .textblock {
+/* section:nth-child(even) .textblock {
     text-align: right; 
-}
+} */
 
 div#back {
     text-align: center;
@@ -164,4 +165,7 @@ div#back {
 footer {
     text-align: center;
     background-color: antiquewhite;
+    border-bottom: 4px solid #711c37;
+    border-left: 4px solid #711c37;
 }
+

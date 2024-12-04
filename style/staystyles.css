@@ -34,7 +34,7 @@ header {
 }
 #h12 {
     position: absolute;
-    top:590%;
+    top:670%;
     left:35%;
     font-size: 2.5em;
     font-weight: bold;
@@ -58,33 +58,38 @@ nav#main {
 }
 
 nav#local {
-    margin-top: 15%;
-   width: 400px;
-   position: absolute;
+    margin-top: 48%;
+   width: 100%;
+  float: left;
    background-color: rgb(239, 228, 215, 0.7);
-   padding:5px;
+   margin-left: 0;
+  
    box-shadow: inset;
+   text-align: center;
    
     color: #711c37;
 }
 nav#local ol {
     
     list-style-type: disc;
-    list-style-position: inside;
+    list-style-position: outside;
     padding: 0;
+    display:flex;
     border-radius: 10px;
     
 }
 nav#local ol li {
     margin-bottom: 20px;
+    margin-left: 15px;
 }
 nav#local ol li a {
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 nav#local ol li a:hover {
-    text-decoration: underline;
+    color: rgb(50,91,30);
 }
 #horizontal {
     list-style-type: none;
@@ -109,7 +114,7 @@ nav#local ol li a:hover {
    
 }
 section#place1 {
-margin-top: 75vh;
+margin-top: 120vh;
 }
 
 section {
@@ -157,6 +162,9 @@ imgblock img {
     width: 100%;
     border-radius: 10px;
 }
+.imgblock img:hover {
+    opacity: 0.6; 
+}
 
 section:nth-child(even) {
     flex-direction: row-reverse;
@@ -187,4 +195,6 @@ div#back {
 footer {
     text-align: center;
     background-color: antiquewhite;
+    border-bottom: 4px solid #711c37;
+    border-left: 4px solid #711c37;
 }

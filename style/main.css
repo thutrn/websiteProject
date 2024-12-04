@@ -27,6 +27,8 @@ footer {
     padding: 16px;
     text-align: center;
     background-color: antiquewhite;
+    border-bottom: 4px solid #711c37;
+    border-left: 4px solid #711c37;
 }
 
 footer .footer-links {
