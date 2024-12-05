@@ -146,11 +146,6 @@ nav#local ol li a:hover {
    
 }
 
-
-section#restaurant1 {
-margin-top: 120vh;
-}
-
 section {
     display: flex;
     justify-content: space-between;
