@@ -11,8 +11,8 @@ body {
     background-image: url('../assets/kamloops1.jpg');
     background-repeat:  no-repeat;
     background-position:  centre centre;
-    background-size: contain;
     background-color: rgba(0, 0, 0, 0.2);
+    background-size: 100% 724px;
     color: #711c37;
   }
 
@@ -33,7 +33,7 @@ header {
 }
 #h12 {
     position: absolute;
-   margin-top: 45%;
+   margin-top: 150px;
     text-align: left;
     font-size: 2.5em;
     font-weight: bold;
@@ -45,8 +45,8 @@ header {
 nav#main {
     position: absolute;
     top: 45px;
-    left: 150px;
-    width: 100%;
+    margin-left: 150px;
+    width: calc(100% - 165px);
     text-align: center;
     background-color: rgba(2, 38, 34, 0.5);
     padding: 20px;
