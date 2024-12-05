@@ -113,11 +113,11 @@ nav#local ol li a:hover {
     text-decoration: underline;
    
 }
-
+/* table style*/
 table {
     width: 80%;
     margin: 50px auto;
-    border-collapse: collapse; /* Collapse borders into single border */
+    border-collapse: collapse; 
     background-color: #a29fa2;
     border: 3px solid #711c37; 
     border-radius: 10px;
@@ -147,6 +147,7 @@ caption {
     font-weight: bold;
 }
 
+/* style for different sections*/
 section {
     display: flex;
     justify-content: space-between;

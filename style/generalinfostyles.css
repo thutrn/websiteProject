@@ -24,6 +24,7 @@ header {
     text-align: center;
     padding: 20px;
 }
+/* style for headings */
 #h11{
     position:absolute;
     top: 5px;
@@ -42,7 +43,7 @@ header {
     color: white
 
 }
-
+/* style for navigation*/
 nav#main {
     position: absolute;
     top: 42px;
